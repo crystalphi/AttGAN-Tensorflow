@@ -182,7 +182,7 @@ class Celeba(Dataset):
         else:
             offset_h = 26
             offset_w = 3
-            img_size = 170
+            img_size = 170 #??
 
         def _map_func(img, label):
             if crop:
