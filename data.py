@@ -199,13 +199,15 @@ class Celeba(Dataset):
             drop_remainder = False
             shuffle = False
             repeat = 1
-            img_paths = img_paths[182637:]
-            labels = labels[182637:]
+            #img_paths = img_paths[182637:]
+            img_paths = img_paths[49990:]
+            #labels = labels[182637:]
+            labels = labels[49990:]
         elif part == 'val':
             #img_paths = img_paths[182000:182637]
-            img_paths = img_paths[49000:50000]  # colab 上只有 5w 张图片
+            img_paths = img_paths[49000:49990]  # colab 上只有 5w 张图片
             #labels = labels[182000:182637]
-            labels = labels[49000:50000]
+            labels = labels[49000:49990]
         else:
             #img_paths = img_paths[:182000]
             img_paths = img_paths[:49000]  # colab 上只有 5w 张图片
