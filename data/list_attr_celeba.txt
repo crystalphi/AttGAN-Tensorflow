@@ -1,0 +1,1 @@
+../../../../datasets/CelebA/Anno/list_attr_celeba.txt
