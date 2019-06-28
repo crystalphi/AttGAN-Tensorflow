@@ -182,7 +182,8 @@ class Celeba(Dataset):
         else:
             offset_h = 26
             offset_w = 3
-            img_size = 170 #??
+            #img_size = 170 #??
+            img_size = 340 #??
 
         def _map_func(img, label):
             if crop:
@@ -204,8 +205,10 @@ class Celeba(Dataset):
             img_paths = img_paths[182000:182637]
             labels = labels[182000:182637]
         else:
-            img_paths = img_paths[:182000]
-            labels = labels[:182000]
+            #img_paths = img_paths[:182000]
+            img_paths = img_paths[:50000]  # colab 上只有 5w 张图片
+            #labels = labels[:182000]
+            labels = labels[:50000]
 
         dataset = disk_image_batch_dataset(img_paths=img_paths,
                                            labels=labels,
